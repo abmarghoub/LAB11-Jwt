@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Utilisateur</title>
+    <style>
+        body { font-family: Arial; background-color: #f4f4f4; text-align: center; margin-top: 100px; }
+        .box {
+            background: white; padding: 25px; border-radius: 8px;
+            width: 400px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        a.button { display: inline-block; margin: 10px; padding: 10px 20px; border-radius: 5px; background: #2b5797; color: white; text-decoration: none; }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h2>Espace Utilisateur</h2>
+    <p>Accessible aux rôles USER et ADMIN.</p>
+    <a th:href="@{/home}" class="button">Retour à l'accueil</a>
+    <a th:href="@{/logout}" class="button" style="background:red;">Déconnexion</a>
+</div>
+</body>
+</html>

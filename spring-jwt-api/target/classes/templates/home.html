@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil - Application Sécurisée</title>
+    <style>
+        body { font-family: Arial; background-color: #f4f4f4; text-align: center; margin-top: 100px; }
+        .box {
+            background: white; padding: 25px; border-radius: 8px;
+            width: 400px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        a.button { display: inline-block; margin: 10px; padding: 10px 20px; border-radius: 5px; background: #2b5797; color: white; text-decoration: none; }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h2>Bienvenue dans l’application sécurisée</h2>
+    <p>Connexion réussie ! Choisissez votre espace :</p>
+    <a th:href="@{/user/dashboard}" class="button">Espace Utilisateur</a>
+    <a th:href="@{/admin/dashboard}" class="button">Espace Administrateur</a>
+    <br><br>
+    <a th:href="@{/logout}" class="button" style="background:red;">Se déconnecter</a>
+</div>
+</body>
+</html>
